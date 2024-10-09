@@ -1,0 +1,27 @@
+header {
+    background-color: black;
+
+    nav {
+        height: 50px;
+        color: white;
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+.mainsection {
+    padding-top: 15px;
+}
+
+.checkboxes {
+    display: flex;
+    justify-content: space-around;
+}
+
+/*Clases generales*/
+
+.width-main {
+    margin: 0px auto;
+    width: min(1200px, 95%);
+}
