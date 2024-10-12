@@ -17,7 +17,7 @@ label {
     width: $widthcontainer;
     height: $heightcontainer;
     outline: 1px solid var(--bgBorder, black);
-    border-radius: $heightcontainer/2;
+    border-radius: calc($heightcontainer / 2);
     position: relative;
     margin: $margincontainer 0;
     overflow: hidden;

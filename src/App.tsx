@@ -56,9 +56,9 @@ function App() {
                     />
 
                     <CheckBoxAnimatedV1
-                        color='orange'
+                        color='rgba(55,25,255,0.8)'
                         text='Opción 2'
-                        width='90px'
+                        width='50px'
                         height='25px'
                         checked={ischeck1}
                         onChange={() => handleCheckBoxChange3(!ischeck1, setIscheck1)}
