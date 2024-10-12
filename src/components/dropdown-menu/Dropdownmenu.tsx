@@ -10,6 +10,7 @@ const Dropdownmenu: FC<PropsDropDownMenu> = ({
     options = [],
     text = 'Menú DropDown '
 }) => {
+    console.log(options)
     return (
         <>
             <button className='dropdown-main'>
