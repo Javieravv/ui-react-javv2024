@@ -2,23 +2,31 @@ import { FC } from 'react';
 import './checkboxanimated.scss'
 
 interface PropsCheck {
-    width?: number;
-    height?: number;
-    style?: object;
-    text?: string;
+    width?:  string;
+    height?: string;
+    style?: React.CSSProperties;
+    text?: string; 
+}
+
+interface CustomCSSProperties extends React.CSSProperties {
+    [key: `--${string}`]: string | number;
 }
 
 const CheckBoxAnimated: FC<PropsCheck> = ({
-    width = 150,
-    height = 50,
+    width  = '150px',
+    height = '50px',
     style = {},
     text = '' }) => {
+    const dinamycStyle:CustomCSSProperties = {
+        ...style,
+        '--bgBorder': 'blue'
+    }
     return (
         <div className="checkmain">
             <label htmlFor="check">{text}</label>
             <div
                 className="checkcontainer"
-                style={style}
+                style={dinamycStyle}
             >
                 <input
                     type="checkbox"

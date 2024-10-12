@@ -6,7 +6,7 @@ $translatecircle: calc($widthcontainer - $heightcontainer);
 .checkmain {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 12px;
 }
 
 label {
@@ -16,7 +16,7 @@ label {
 .checkcontainer {
     width: $widthcontainer;
     height: $heightcontainer;
-    outline: 1px solid black;
+    outline: 1px solid var(--bgBorder, black);
     border-radius: $heightcontainer/2;
     position: relative;
     margin: $margincontainer 0;

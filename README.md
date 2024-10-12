@@ -1,50 +1,22 @@
-# React + TypeScript + Vite
+# Algunos componentes para usar con React.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ejercicios para elaborar componentes para utilizar en React, empleando diferentes técnicas, SASS, CSS en línea, entre otros.
 
-Currently, two official plugins are available:
+Hay ya múltiples bibliotecas de componentes que hacen esto mismo, pero aquí solo quiere practicarse  aprender.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Listado de componentes
 
-## Expanding the ESLint configuration
+1. Checkbox animado.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Este componente muestra un checkBox animado y un letrero que indica si está activo o inactivo.
+Muestra ON si el checkbox se marca, OFF si no se marca.
 
-- Configure the top-level `parserOptions` property like this:
+2. CheckBox animado 1
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Es similar al anterior, pero no muestra los mensajes ON y OFF.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Permite personalizar algunos estilos, como ancho, alto, color de borde y del círculo, así como el texto que se mostrará.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+También permite que se controle el valor desde el componente padre, para guardar en un estado si está o no está activo.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+3. Dropdown dinámico.
