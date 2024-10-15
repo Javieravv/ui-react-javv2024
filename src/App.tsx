@@ -53,7 +53,7 @@ function App() {
                         width='90px'
                         height='25px'
                         checked={ischeck}
-                        onChange={() => handleCheckBoxChange3(!ischeck, setIscheck)}
+                        onChange={() => setIscheck(!ischeck)}
                     />
 
                     <CheckBoxAnimatedV1
@@ -62,7 +62,7 @@ function App() {
                         width='50px'
                         height='25px'
                         checked={ischeck1}
-                        onChange={() => handleCheckBoxChange3(!ischeck1, setIscheck1)}
+                        onChange={() => setIscheck1(!ischeck1)}
                     />
                     <div>
                         <h3>La opción 1 está {ischeck ? 'Marcada' : 'Desmarcada'}</h3>

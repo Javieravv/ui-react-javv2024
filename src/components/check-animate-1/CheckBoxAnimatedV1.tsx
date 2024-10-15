@@ -1,19 +1,18 @@
 import { FC } from 'react';
 import './checkboxanimatedv1.scss';
 
-interface PropsCheckV1 {
+interface CustomCSSProperties extends React.CSSProperties {
+    [key: `--${string}`]: string | number;
+}
+
+interface PropsCheckV1 extends React.InputHTMLAttributes<HTMLInputElement> {
     width?: string;
     height?: string;
     style?: React.CSSProperties;
     text?: string;
     color?: React.CSSProperties['color'];
-    checked: boolean;
-    onChange: (value: boolean) => void;
 }
 
-interface CustomCSSProperties extends React.CSSProperties {
-    [key: `--${string}`]: string | number;
-}
 
 const CheckBoxAnimatedV1: FC<PropsCheckV1> = ({
     width = '60px',
@@ -21,8 +20,7 @@ const CheckBoxAnimatedV1: FC<PropsCheckV1> = ({
     style = {},
     text = 'Escoja',
     color = 'black',
-    checked = false,
-    onChange
+    ...props
 }) => {
     const dynamicStyle: CustomCSSProperties = {
         ...style,
@@ -31,9 +29,6 @@ const CheckBoxAnimatedV1: FC<PropsCheckV1> = ({
         '--color': color || 'black'
     }
 
-    const handleCheckBoxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        onChange(e.target.checked)
-    }
     return (
         <>
             <div
@@ -46,8 +41,8 @@ const CheckBoxAnimatedV1: FC<PropsCheckV1> = ({
                         type="checkbox"
                         name="checkbox"
                         id="inputcheck"
-                        checked={checked}
-                        onChange={handleCheckBoxChange}
+                        checked={props.checked}
+                        onChange={props.onChange}
                     />
                 </div>
             </div>
