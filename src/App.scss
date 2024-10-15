@@ -25,3 +25,18 @@ header {
     margin: 0px auto;
     width: min(1200px, 95%);
 }
+
+.div-input {
+    padding: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    div {
+        outline: 2px solid green;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 5px;
+    }
+}

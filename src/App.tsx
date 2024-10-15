@@ -3,6 +3,7 @@ import './App.scss'
 import CheckBoxAnimatedV1 from './components/check-animate-1/CheckBoxAnimatedV1'
 import CheckBoxAnimated from './components/check-animate/CheckBoxAnimated'
 import Dropdownmenu from './components/dropdown-menu/Dropdownmenu'
+import Input from './components/input/Input'
 
 function App() {
     const [ischeck, setIscheck] = useState(false)
@@ -12,7 +13,7 @@ function App() {
         value: boolean,
         setChange: React.Dispatch<React.SetStateAction<boolean>>
     ) => {
-        setChange( value )
+        setChange(value)
     }
 
     return (
@@ -63,10 +64,27 @@ function App() {
                         checked={ischeck1}
                         onChange={() => handleCheckBoxChange3(!ischeck1, setIscheck1)}
                     />
+                    <div>
+                        <h3>La opción 1 está {ischeck ? 'Marcada' : 'Desmarcada'}</h3>
+                        <h3>La opción 2 está {ischeck1 ? 'Marcada' : 'Desmarcada'}</h3>
+                    </div>
                 </article>
-                <article>
-                    <h3>La opción 1 está { ischeck? 'Marcada' : 'Desmarcada' }</h3>
-                    <h3>La opción 2 está { ischeck1? 'Marcada' : 'Desmarcada' }</h3>
+                <article className="div-input">
+                    <div>
+                        <Input
+                            placeholder='Cédula'
+                        />
+                        <Input
+                            placeholder='Nombres'
+                        />
+                    </div>
+                    <div>
+                        <Input
+                            placeholder='Apellidos'
+                        /><Input
+                            placeholder='Ciudad de Origen'
+                        />
+                    </div>
                 </article>
             </section>
         </>
